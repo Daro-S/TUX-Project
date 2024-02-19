@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB1DB9F1-73FF-4ED9-914A-5969D669BBA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>School_Management_System</RootNamespace>
+    <AssemblyName>School_Management_System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TuxGlobal.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>C:\Users\ASUS\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>C:\Users\ASUS\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>C:\Users\ASUS\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>C:\Users\ASUS\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>C:\Users\ASUS\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DashBoardMgmt.cs" />
+    <Compile Include="MyProfilefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfilefrm.Designer.cs">
+      <DependentUpon>MyProfilefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AtendanceMgmt.cs" />
+    <Compile Include="Dashboardfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboardfrm.Designer.cs">
+      <DependentUpon>Dashboardfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paymentfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paymentfrm.Designer.cs">
+      <DependentUpon>Paymentfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainfrm.Designer.cs">
+      <DependentUpon>Mainfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMgmt.cs" />
+    <Compile Include="PaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentReport.Designer.cs">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterUserfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterUserfrm.Designer.cs">
+      <DependentUpon>RegisterUserfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterStudentfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterStudentfrm.Designer.cs">
+      <DependentUpon>RegisterStudentfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPasswordfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPasswordfrm.Designer.cs">
+      <DependentUpon>ResetPasswordfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="School_Management_System.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="School_Management_System.Designer.cs">
+      <DependentUpon>School_Management_System.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settingfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settingfrm.Designer.cs">
+      <DependentUpon>Settingfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInfo.cs" />
+    <Compile Include="StudentInformationfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentInformationfrm.Designer.cs">
+      <DependentUpon>StudentInformationfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="MyProfilefrm.resx">
+      <DependentUpon>MyProfilefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboardfrm.resx">
+      <DependentUpon>Dashboardfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paymentfrm.resx">
+      <DependentUpon>Paymentfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainfrm.resx">
+      <DependentUpon>Mainfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentReport.resx">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterUserfrm.resx">
+      <DependentUpon>RegisterUserfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterStudentfrm.resx">
+      <DependentUpon>RegisterStudentfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPasswordfrm.resx">
+      <DependentUpon>ResetPasswordfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="School_Management_System.resx">
+      <DependentUpon>School_Management_System.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settingfrm.resx">
+      <DependentUpon>Settingfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInformationfrm.resx">
+      <DependentUpon>StudentInformationfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-based-school.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Cheques_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_details_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_more_info_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_training_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_male_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_male_user_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Menu_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3c9PuA6K_400x400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduate_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TuxGlobal.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
